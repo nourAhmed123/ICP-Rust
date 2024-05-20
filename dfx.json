@@ -9,8 +9,12 @@
       "dependencies": [
         "trial_backend"
       ],
+      "frontend": {
+        "entrypoint": "src/trial_frontend/index.html"
+      },
       "source": [
         "src/trial_frontend/dist"
+
       ],
       "type": "assets",
       "workspace": "trial_frontend"
