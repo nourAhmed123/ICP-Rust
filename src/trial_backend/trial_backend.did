@@ -1,0 +1,6 @@
+service : {
+  "get_question": () -> (text) query;
+  "get_votes": () -> (text) query;
+  "vote": (text) -> (text);
+  "reset_votes": () -> (text);
+}
