@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiseIn Exam Management</title>
+
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00796b;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #004d40;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  background-color: #e0f7fa;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+#resultSection {
+  margin-top: 20px;
+}
+
+#resultSection h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #004d40;
+}
+
+#examResult, #participationResult {
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #004d40;
+}
+
+</style>
+<body>
+
+  <div class="container">
+    <h1>RiseIn Exam Management</h1>
+
+    <div class="form-section">
+      <h2>Insert Exam</h2>
+      <input type="text" id="examId" placeholder="Exam ID">
+      <input type="text" id="outOf" placeholder="Out Of">
+      <input type="text" id="course" placeholder="Course">
+      <input type="text" id="curve" placeholder="Curve">
+      <button id="insertExam">Insert Exam</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Fetch Exam</h2>
+      <input type="text" id="fetchExamId" placeholder="Fetch Exam ID">
+      <button id="fetchExam">Fetch Exam</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Insert Participation</h2>
+      <input type="text" id="participationId" placeholder="Participation ID">
+      <input type="text" id="participation" placeholder="Participation">
+      <button id="insertParticipation">Insert Participation</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Fetch Participation</h2>
+      <input type="text" id="fetchParticipationId" placeholder="Fetch Participation ID">
+      <button id="fetchParticipation">Fetch Participation</button>
+    </div>
+
+    <div id="resultSection">
+      <h2>Results</h2>
+      <p id="examResult"></p>
+      <p id="participationResult"></p>
+    </div>
+  </div>
+
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
