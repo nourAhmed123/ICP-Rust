@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { proposal2_backend } from '../../../declarations/proposal2_backend';
+import React, { useState, useEffect } from "react";
+import { proposal2_backend } from "../../../declarations/proposal2_backend";
 
 const ProposalList = ({ toggleEditMode, refreshProposals }) => {
   const [proposals, setProposals] = useState([]);
@@ -43,14 +43,35 @@ const ProposalList = ({ toggleEditMode, refreshProposals }) => {
             {console.log("Proposal Description:", proposal.description)}
             <h2>{proposal.name}</h2>
             <p>{proposal.description}</p>
-            <p>Approve: {proposal.approve}</p>
-            <p>Reject: {proposal.reject}</p>
-            <p>Pass: {proposal.pass}</p>
-            <button onClick={() => handleVote(proposal.id, { Approve: null })}>Approve</button>
-            <button onClick={() => handleVote(proposal.id, { Reject: null })}>Reject</button>
-            <button onClick={() => handleVote(proposal.id, { Pass: null })}>Pass</button>
-            <button className="edit" onClick={() => toggleEditMode(proposal.id)}>Edit</button>
-            <button className="end" onClick={() => handleEndProposal(proposal.id)}>End Proposal</button>
+            <p>
+              Approve: {proposal.approve}{" "}
+              <button
+                onClick={() => handleVote(proposal.id, { Approve: null })}
+              >
+                Approve
+              </button>
+            </p>
+            <p>Reject: {proposal.reject}   <button onClick={() => handleVote(proposal.id, { Reject: null })}>
+              Reject
+            </button></p>
+            <p>Pass: {proposal.pass}       <button onClick={() => handleVote(proposal.id, { Pass: null })}>
+              Pass
+            </button></p>
+
+          
+      
+            <button
+              className="edit"
+              onClick={() => toggleEditMode(proposal.id)}
+            >
+              Edit
+            </button>
+            <button
+              className="end"
+              onClick={() => handleEndProposal(proposal.id)}
+            >
+              End Proposal
+            </button>
           </li>
         ))}
       </ul>
