@@ -70,7 +70,7 @@ impl Storable for Exam {
     };
 }
 
-//who we can write this data to our local memory
+//who we can write this data to our local memoryyyyyy
 
 thread_local! {
     //MEMORY MANGER that manges our memory
