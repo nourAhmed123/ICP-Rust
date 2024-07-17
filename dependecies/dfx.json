@@ -1,0 +1,24 @@
+{
+  "canisters": {
+    "dependecies_backend": {
+      "candid": "src/dependecies_backend/dependecies_backend.did",
+      "package": "dependecies_backend",
+      "type": "rust",
+      "dependencies": [
+        "internet_identity"
+    ]
+    },
+    "internet_identity": {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+  }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
